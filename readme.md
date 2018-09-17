@@ -5,17 +5,36 @@
 Instructions to install Burgmann Harvard Bibliography system for MS Word
 Btw: only does websites and books for now because in BETA
 
-To install on Windows:
-1. Open the Microsoft Word Bibliography Location on your computer 
-    - Word 2010: <winword.exe directory>\Bibliography\Style
+### To install on Windows:
+1. Download The latest version of HarvardBurgmann.xsl here 
+2. Open the Microsoft Word Bibliography Location on your computer 
+    - Word 2010:
+	```
+	<winword.exe directory>\Bibliography\Style
+	```
 
-    - Word 2010 (32 bit systems): %programfiles%\Microsoft Office\Office14\Bibliography\Style
+    - Word 2010 (32 bit systems): 
+	```
+	%programfiles%\Microsoft Office\Office14\Bibliography\Style
+	```
 
     - Word 2016 (Office 365): 
-    -- C:\Users<currentusername>\AppData\Roaming\Microsoft\Bibliography\Style 
+	```
+	C:\Users<currentusername>\AppData\Roaming\Microsoft\Bibliography\Style
+	``` 
     -- OR
-    -- %AppData%\Microsoft\Templates\LiveContent\15\Managed\Word Document Bibliography Styles
+	```	
+		%AppData%\Microsoft\Templates\LiveContent\15\Managed\Word Document Bibliography Styles
+	```
 
-2. Then drag the HarvardBurgman.xsl into that folder (It should have other bibliography styles)
+3. Then drag the HarvardBurgman.xsl into that folder (It should have other bibliography styles)
 
-3. Restart Word
+4. Restart Word
+
+### To install on Mac:
+1. Click on Finder 
+2. Press CMD+SHIFT+G
+3. Paste this location:
+    /Applications/Microsoft Word.app/Contents/Resources/Style
+4. Drag file into the folder with the other bibliography types
+5. Restart Word
