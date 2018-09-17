@@ -10,7 +10,7 @@
     <xsl:choose>
       <!--Set an optional version number for this style-->
       <xsl:when test="b:version">
-        <xsl:text>2018.8.14</xsl:text>
+        <xsl:text>2018.9.17</xsl:text>
       </xsl:when>
       <!--Defines the name of the style in the References dropdown-->
       <xsl:when test="b:StyleName">
