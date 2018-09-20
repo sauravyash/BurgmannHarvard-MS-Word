@@ -10,7 +10,7 @@
     <xsl:choose>
       <!--Set an optional version number for this style-->
       <xsl:when test="b:version">
-        <xsl:text>2018.9.17</xsl:text>
+        <xsl:text>2018.9.20</xsl:text>
       </xsl:when>
       <!--Defines the name of the style in the References dropdown-->
       <xsl:when test="b:StyleName">
@@ -172,7 +172,6 @@
           <i>
             <xsl:value-of select="b:Title" />
           </i>
-          <xsl:text>, </xsl:text>
         </xsl:when>
         <xsl:otherwise>
           <!--When the corporate author does not exist, display the normal author-->
