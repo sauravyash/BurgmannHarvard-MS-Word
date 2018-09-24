@@ -1,5 +1,6 @@
 # Harvard Burgmann Style
-## Support
+All Styling Based Off [Melbourne University's Harvard Guide](https://library.unimelb.edu.au/recite).
+## Supported Formats
 ### Working
 - Websites
 - Books
