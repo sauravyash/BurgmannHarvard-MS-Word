@@ -1,4 +1,14 @@
 # Harvard Burgmann Style
+## Support
+### Working
+    - Websites
+    - Books
+
+### Experimental/Beta
+ - None
+
+### Planned In Future
+    - Journal
 
 ## Installation
 
@@ -6,7 +16,7 @@ Instructions to install Burgmann Harvard Bibliography system for MS Word
 Btw: only does websites and books for now because in BETA
 
 ### To install on Windows:
-1. Download The latest version of HarvardBurgmann.xsl by HOLDING <kbd>ALT</kbd> and clicking [here](https://cdn.rawgit.com/sauravyash/BurgmannHarvard-MS-Word/356b0fba/BurgmannHarvard.xsl)
+1. Download The latest version of HarvardBurgmann.xsl by holding <kbd>ALT</kbd> and clicking [here](https://cdn.rawgit.com/sauravyash/BurgmannHarvard-MS-Word/356b0fba/BurgmannHarvard.xsl)
 2. Open the Microsoft Word Bibliography Location on your computer
     - Word 2010:
 	```
@@ -32,7 +42,7 @@ Btw: only does websites and books for now because in BETA
 4. Restart Word
 
 ### To install on Mac:
-1. Download The latest version of HarvardBurgmann.xsl by HOLDING <kbd>ALT</kbd> and clicking [here](https://cdn.rawgit.com/sauravyash/BurgmannHarvard-MS-Word/356b0fba/BurgmannHarvard.xsl)
+1. Download The latest version of HarvardBurgmann.xsl by holding <kbd>ALT</kbd> and clicking [here](https://cdn.rawgit.com/sauravyash/BurgmannHarvard-MS-Word/356b0fba/BurgmannHarvard.xsl)
 
 2. Click on Finder
 3. Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>G</kbd>
