@@ -10,7 +10,7 @@
     <xsl:choose>
       <!--Set an optional version number for this style-->
       <xsl:when test="b:version">
-        <xsl:text>2018.9.20</xsl:text>
+        <xsl:text>2018.9.24</xsl:text>
       </xsl:when>
       <!--Defines the name of the style in the References dropdown-->
       <xsl:when test="b:StyleName">
@@ -62,9 +62,6 @@
     <xsl:variable name="cAuthors">
       <xsl:value-of select="count(b:Author/b:Author/b:NameList/b:Person)" />
     </xsl:variable>
-    <xsl:variable name="cAuthorMiddleName">
-      <xsl:value-of select="count(b:Author/b:Author/b:NameList/b:Person/b:Middle)" />
-    </xsl:variable>
     <!--Label the paragraph as an Office Bibliography paragraph-->
     <p>
       <xsl:choose>
@@ -74,42 +71,22 @@
           <xsl:text> </xsl:text>
         </xsl:when>
         <xsl:otherwise>
-
-          <xsl:choose>
-            <xsl:when test="$cAuthors=1">
-              <!--When the corporate author does not exist, display the normal author-->
-              <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:Last" />
-              <xsl:text>, </xsl:text>
-              <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:First" />
-              <xsl:text> </xsl:text>
-              <xsl:choose>
-                <xsl:when test="$cAuthorMiddleName!=0">
-                  <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:Middle" />
-                  <xsl:text> </xsl:text>
-                </xsl:when>
-              </xsl:choose>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:choose>
-                <xsl:when test="$cAuthors=2">
-                  <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:Last" />
-                  <xsl:text>, </xsl:text>
-                  <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:First" />
-                  <xsl:text> and </xsl:text>
-                  <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:Last" />
-                  <xsl:text>, </xsl:text>
-                  <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:First" />
-                  <xsl:text> </xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:Last" />
-                  <xsl:text>, </xsl:text>
-                  <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:First" />
-                  <xsl:text> et al. </xsl:text>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:otherwise>
-          </xsl:choose>
+        	<xsl:variable name="i-author">
+          	<xsl:text>1</xsl:text>
+          </xsl:variable>
+        	<xsl:for-each select="b:Author/b:Author/b:NameList/b:Person">
+        		<xsl:value-of select="b:Last" />
+        		<xsl:text>, </xsl:text>
+        		<xsl:value-of select="substring(b:First,1,1)" />
+        		<xsl:text>. </xsl:text>
+        		<xsl:if test="b:Middle != 0">
+        			<xsl:value-of select="b:Middle" />
+        			<xsl:text> </xsl:text>
+        		</xsl:if> 
+	          <xsl:if test="position() &lt; $cAuthors">
+        			<xsl:text> and </xsl:text>
+        		</xsl:if> 
+        	</xsl:for-each>
         </xsl:otherwise>
       </xsl:choose>
       <xsl:value-of select="b:Year" />
@@ -159,14 +136,14 @@
     <xsl:variable name="cCorporateAuthors">
       <xsl:value-of select="count(b:Author/b:Author/b:Corporate)" />
     </xsl:variable>
+
     <!--Label the paragraph as an Office Bibliography paragraph-->
     <p>
       <xsl:choose>
         <xsl:when test="$cCorporateAuthors!=0">
           <!--When the corporate author exists display the corporate author-->
-          <xsl:text>'</xsl:text>
           <xsl:value-of select="b:Author/b:Author/b:Corporate" />
-          <xsl:text>' </xsl:text>
+          <xsl:text> </xsl:text>
           <xsl:value-of select="b:Year" />
           <xsl:text>, </xsl:text>
           <i>
@@ -186,7 +163,7 @@
           </i>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:text>, </xsl:text>
+      <xsl:text>, Viewed On </xsl:text>
       <xsl:value-of select="b:DayAccessed" />
       <xsl:text> </xsl:text>
       <xsl:value-of select="b:MonthAccessed" />
