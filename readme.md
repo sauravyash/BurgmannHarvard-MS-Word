@@ -1,14 +1,14 @@
 # Harvard Burgmann Style
 ## Support
 ### Working
-    - Websites
-    - Books
+- Websites
+- Books
 
 ### Experimental/Beta
  - None
 
 ### Planned In Future
-    - Journal
+- Journal
 
 ## Installation
 
