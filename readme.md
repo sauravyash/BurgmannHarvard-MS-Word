@@ -4,12 +4,13 @@ All Styling Based Off [Melbourne University's Harvard Guide](https://library.uni
 ### Working
 - Websites
 - Books
+- Journal
 
 ### Experimental/Beta
- - None
+- None
 
 ### Planned In Future
-- Journal
+- None
 
 ## Installation
 
