@@ -10,7 +10,7 @@
     <xsl:choose>
       <!--Set an optional version number for this style-->
       <xsl:when test="b:version">
-        <xsl:text>2019.3.26</xsl:text>
+        <xsl:text>2019.9.24</xsl:text>
       </xsl:when>
       <!--Defines the name of the style in the References dropdown-->
       <xsl:when test="b:StyleName">
@@ -18,7 +18,7 @@
       </xsl:when>
 
       <xsl:when test="b:XslVersion">
-				<xsl:text>2018</xsl:text>
+				<xsl:text>2019</xsl:text>
 			</xsl:when>
       <!--New: need a StyleNameLocalized-->
       <xsl:when test="b:StyleNameLocalized">
@@ -154,8 +154,8 @@
           <!--When the corporate author does not exist, display the normal author-->
           <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:Last" />
           <xsl:text>, </xsl:text>
-          <xsl:value-of select="b:Author/b:Author/b:NameList/b:Person/b:First" />
-          <xsl:text> </xsl:text>
+          <xsl:value-of select="substring(b:Author/b:Author/b:NameList/b:Person/b:First,1,1)" />
+          <xsl:text>. </xsl:text>
           <xsl:value-of select="b:Year" />
           <xsl:text>, </xsl:text>
           <i>
